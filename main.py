@@ -6,4 +6,9 @@ def index():
     return jsonify({'name': 'alice',
                     'email': 'alice@outlook.com'})
 
+@app.route('/by_name/<name>')
+def index(name):
+    return jsonify({'name': name,
+                    'email': name+'@outlook.com'})
+
 app.run()
